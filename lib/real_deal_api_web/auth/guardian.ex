@@ -36,7 +36,7 @@ defmodule RealDealApiWeb.Auth.Guardian do
     end
   end
 
-  defp validate_password(password, hashed_password) do
+  def validate_password(password, hashed_password) do
     Bcrypt.verify_pass(password, hashed_password)
   end
 
