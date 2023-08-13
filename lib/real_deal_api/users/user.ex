@@ -2,7 +2,7 @@ defmodule RealDealApi.Users.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @optional_fields [:id, :inserted_at, :updated_at]
+  @optional_fields [:id, :inserted_at, :updated_at, :biography, :gender]
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "users" do

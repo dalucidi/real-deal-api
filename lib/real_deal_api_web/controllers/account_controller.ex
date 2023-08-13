@@ -76,7 +76,7 @@ defmodule RealDealApiWeb.AccountController do
         raise ErrorResponse.Unauthorized, message: "Password Incorrect."
     end
   end
-  def update(_conn, %{"account" => _account_params}), do: raise ErrorResponse.Unauthorized, message: "No Password Given."
+  def update(_conn, %{"account" => _account_params}), do: (raise ErrorResponse.Unauthorized, message: "No Password Given.")
 
   def delete(conn, %{"id" => id}) do
     account = Accounts.get_account!(id)
